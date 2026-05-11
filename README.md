@@ -1,4 +1,4 @@
-# ZQ Audio Design Portfolio Web App
+# ZSQAudio Portfolio Web App
 
 本项目是一个本地 Web App，不再通过双击 `index.html` 打开。
 

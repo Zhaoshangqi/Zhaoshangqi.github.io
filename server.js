@@ -27,8 +27,8 @@ const page = `<!doctype html>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="dark">
     <meta name="description" content="面向游戏、影视和交互产品岗位的音频设计师求职作品集。">
-    <title>ZQ Audio Design | 求职作品集</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2307080d'/%3E%3Cpath d='M18 34c8-22 18 22 28 0' fill='none' stroke='%23f6a43a' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M18 24c8 18 18-18 28 0' fill='none' stroke='%234fd1c5' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+    <title>ZSQAudio | 求职作品集</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2307080d'/%3E%3Ccircle cx='32' cy='32' r='23' fill='none' stroke='%234fd1c5' stroke-width='4'/%3E%3Cpath d='M14 43c10-26 24 26 36 0' fill='none' stroke='%23f6a43a' stroke-width='5' stroke-linecap='round'/%3E%3Ctext x='32' y='36' text-anchor='middle' font-family='Arial,sans-serif' font-size='16' font-weight='800' fill='white'%3EZSQ%3C/text%3E%3C/svg%3E">
     <script>document.documentElement.classList.add("has-js");</script>
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -36,9 +36,9 @@ const page = `<!doctype html>
     <a class="skip-link" href="#work">跳到作品</a>
 
     <header class="site-header" aria-label="主导航">
-      <a class="brand" href="#top" aria-label="ZQ Audio Design 首页">
+      <a class="brand" href="#top" aria-label="ZSQAudio 首页">
         <span class="brand-mark" aria-hidden="true"></span>
-        <span>ZQ Audio Design</span>
+        <span>ZSQAudio</span>
       </a>
       <nav class="nav-links" aria-label="页面导航">
         <a href="#profile">简介</a>
@@ -214,7 +214,7 @@ const page = `<!doctype html>
     </main>
 
     <footer class="site-footer">
-      <p>© 2026 ZQ Audio Design. Web portfolio for focused listening and recruiter review.</p>
+      <p>© 2026 ZSQAudio. Web portfolio for focused listening and recruiter review.</p>
     </footer>
 
     <script src="app.js" defer></script>
