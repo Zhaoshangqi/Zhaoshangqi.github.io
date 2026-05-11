@@ -50,8 +50,10 @@ const build = async () => {
   await fs.writeFile(path.join(dist, "index.html"), await extractHtml(), "utf8");
   await fs.writeFile(path.join(dist, ".nojekyll"), "", "utf8");
   await copyFile(path.join(root, "app.js"), path.join(dist, "app.js"));
+  await copyFile(path.join(root, "three-scene.js"), path.join(dist, "three-scene.js"));
   await copyFile(path.join(root, "styles.css"), path.join(dist, "styles.css"));
   await copyDir(path.join(root, "data"), path.join(dist, "data"));
+  await copyDir(path.join(root, "assets", "vendor"), path.join(dist, "assets", "vendor"));
   await copyDir(path.join(root, "assets", "thumbs"), path.join(dist, "assets", "thumbs"));
   await copyDir(path.join(root, "assets", "works"), path.join(dist, "assets", "works"), {
     exclude: (source) => path.basename(source) === "work-13.mp4",

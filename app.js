@@ -651,6 +651,33 @@
 
   const categoryOrder = () => ["all", ...categories().map(({ name }) => name)];
 
+  const sceneWork = (work) => ({
+    id: work.id,
+    title: displayTitle(work),
+    category: categoryName(work),
+    role: displayRole(work),
+    year: work.year || "",
+    mediaUrl: work.mediaUrl ? assetPath(work.mediaUrl) : "",
+    posterUrl: work.posterUrl ? assetPath(work.posterUrl) : "",
+    fileType: work.fileType || "",
+    fileName: work.fileName || "",
+    tags: work.tags || [],
+  });
+
+  const emitPortfolioSceneState = (overrides = {}) => {
+    const detail = {
+      works: works.map(sceneWork),
+      category: categoryFilter,
+      activeWorkId,
+      direction: workSection?.dataset.switchDirection || "next",
+      lang: currentLang,
+      ...overrides,
+    };
+
+    window.__ZSQ_PORTFOLIO_STATE__ = detail;
+    window.dispatchEvent(new CustomEvent("zsq:portfolio-state", { detail }));
+  };
+
   const ensureGlobalScene = () => {
     if (!globalSceneEl) {
       globalSceneEl = makeEl("div", "global-scene-bg");
@@ -843,6 +870,7 @@
     activeWorkId = active.id;
     const mediaData = await resolveMedia(active);
     setGlobalScene(mediaData, workSection?.dataset.switchDirection || "next");
+    emitPortfolioSceneState({ direction: workSection?.dataset.switchDirection || "next" });
     const categoryItems = categoryFilter === "all"
       ? items
       : works.filter((work) => categoryName(work) === categoryFilter);

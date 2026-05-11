@@ -53,6 +53,7 @@ const page = `<!doctype html>
         <video class="hero-bg-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
           <source src="assets/hero/hero-interior-gallery.mp4" type="video/mp4">
         </video>
+        <div id="three-stage" class="three-stage" aria-hidden="true"></div>
         <canvas id="hero-visual" class="hero-visual" aria-hidden="true"></canvas>
         <div class="hero-grid">
           <div class="hero-copy">
@@ -217,6 +218,7 @@ const page = `<!doctype html>
       <p>© 2026 ZSQAudio. Web portfolio for focused listening and recruiter review.</p>
     </footer>
 
+    <script type="module" src="three-scene.js"></script>
     <script src="app.js" defer></script>
   </body>
 </html>`;
