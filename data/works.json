@@ -1,0 +1,228 @@
+[
+  {
+    "id": "source-01",
+    "title": "部分合成水音效素材制作",
+    "category": "Foley / Water",
+    "role": "Sound Design Process / Material Editing",
+    "year": "2026",
+    "description": "导入自本地作品文件夹，可在上传与排版区域继续编辑说明、标签和展示顺序。",
+    "tags": [
+      "water",
+      "foley",
+      "process",
+      "layers"
+    ],
+    "mediaUrl": "assets/works/work-01.mp4",
+    "posterUrl": "assets/thumbs/work-01.jpg",
+    "fileName": "部分合成水音效素材制作_batch.mp4",
+    "fileType": "video/mp4",
+    "createdAt": 1
+  },
+  {
+    "id": "source-02",
+    "title": "超越善恶2音效贴片",
+    "category": "Sound Redesign",
+    "role": "Sound Redesign / Mix",
+    "year": "2026",
+    "description": "导入自本地作品文件夹，可在上传与排版区域继续编辑说明、标签和展示顺序。",
+    "tags": [
+      "redesign",
+      "sync"
+    ],
+    "mediaUrl": "assets/works/work-02.mp4",
+    "posterUrl": "assets/thumbs/work-02.jpg",
+    "fileName": "超越善恶2音效贴片_batch.mp4",
+    "fileType": "video/mp4",
+    "createdAt": 2
+  },
+  {
+    "id": "source-03",
+    "title": "打药音效",
+    "category": "Gameplay Feedback",
+    "role": "Sound Design / Editing / Mix",
+    "year": "2026",
+    "description": "导入自本地作品文件夹，可在上传与排版区域继续编辑说明、标签和展示顺序。",
+    "tags": [
+      "gameplay",
+      "feedback"
+    ],
+    "mediaUrl": "assets/works/work-03.mp4",
+    "posterUrl": "assets/thumbs/work-03.jpg",
+    "fileName": "打药音效.mp4",
+    "fileType": "video/mp4",
+    "createdAt": 3
+  },
+  {
+    "id": "source-04",
+    "title": "海边实录环境",
+    "category": "Ambience",
+    "role": "Field Recording / Ambience Design",
+    "year": "2026",
+    "description": "导入自本地作品文件夹，可在上传与排版区域继续编辑说明、标签和展示顺序。",
+    "tags": [
+      "ambience",
+      "field recording"
+    ],
+    "mediaUrl": "assets/works/work-04.mp4",
+    "posterUrl": "assets/thumbs/work-04.jpg",
+    "fileName": "海边实录环境_batch.mp4",
+    "fileType": "video/mp4",
+    "createdAt": 4
+  },
+  {
+    "id": "source-05",
+    "title": "合成水音效过程展示",
+    "category": "Foley / Water",
+    "role": "Sound Design Process / Material Editing",
+    "year": "2026",
+    "description": "导入自本地作品文件夹，可在上传与排版区域继续编辑说明、标签和展示顺序。",
+    "tags": [
+      "water",
+      "foley",
+      "process",
+      "layers"
+    ],
+    "mediaUrl": "assets/works/work-05.mp4",
+    "posterUrl": "assets/thumbs/work-05.jpg",
+    "fileName": "合成水音效过程展示_batch.mp4",
+    "fileType": "video/mp4",
+    "createdAt": 5
+  },
+  {
+    "id": "source-06",
+    "title": "合成水音效展示贴片",
+    "category": "Foley / Water",
+    "role": "Sound Redesign / Mix",
+    "year": "2026",
+    "description": "导入自本地作品文件夹，可在上传与排版区域继续编辑说明、标签和展示顺序。",
+    "tags": [
+      "water",
+      "foley",
+      "redesign",
+      "sync"
+    ],
+    "mediaUrl": "assets/works/work-06.mp4",
+    "posterUrl": "assets/thumbs/work-06.jpg",
+    "fileName": "合成水音效展示贴片_batch.mp4",
+    "fileType": "video/mp4",
+    "createdAt": 6
+  },
+  {
+    "id": "source-07",
+    "title": "火合成音效制作",
+    "category": "Elemental",
+    "role": "Sound Design / Editing / Mix",
+    "year": "2026",
+    "description": "导入自本地作品文件夹，可在上传与排版区域继续编辑说明、标签和展示顺序。",
+    "tags": [
+      "fire",
+      "elemental"
+    ],
+    "mediaUrl": "assets/works/work-07.mp4",
+    "posterUrl": "assets/thumbs/work-07.jpg",
+    "fileName": "火合成音效制作_batch.mp4",
+    "fileType": "video/mp4",
+    "createdAt": 7
+  },
+  {
+    "id": "source-08",
+    "title": "诀尘idleshow音效展示",
+    "category": "Character Showcase",
+    "role": "Sound Redesign / Mix",
+    "year": "2026",
+    "description": "导入自本地作品文件夹，可在上传与排版区域继续编辑说明、标签和展示顺序。",
+    "tags": [
+      "character",
+      "showcase"
+    ],
+    "mediaUrl": "assets/works/work-08.mp4",
+    "posterUrl": "assets/thumbs/work-08.jpg",
+    "fileName": "诀尘idleshow音效展示_batch.mp4",
+    "fileType": "video/mp4",
+    "createdAt": 8
+  },
+  {
+    "id": "source-09",
+    "title": "魁斗idleshow音效展示",
+    "category": "Character Showcase",
+    "role": "Sound Redesign / Mix",
+    "year": "2026",
+    "description": "导入自本地作品文件夹，可在上传与排版区域继续编辑说明、标签和展示顺序。",
+    "tags": [
+      "character",
+      "showcase"
+    ],
+    "mediaUrl": "assets/works/work-09.mp4",
+    "posterUrl": "assets/thumbs/work-09.jpg",
+    "fileName": "魁斗idleshow音效展示_batch.mp4",
+    "fileType": "video/mp4",
+    "createdAt": 9
+  },
+  {
+    "id": "source-10",
+    "title": "魅影终极皮开场展示",
+    "category": "Cinematic",
+    "role": "Sound Redesign / Mix",
+    "year": "2026",
+    "description": "导入自本地作品文件夹，可在上传与排版区域继续编辑说明、标签和展示顺序。",
+    "tags": [
+      "sound design"
+    ],
+    "mediaUrl": "assets/works/work-10.mp4",
+    "posterUrl": "assets/thumbs/work-10.jpg",
+    "fileName": "魅影终极皮开场展示_batch.mp4",
+    "fileType": "video/mp4",
+    "createdAt": 10
+  },
+  {
+    "id": "source-11",
+    "title": "诺拉idleshow音效展示",
+    "category": "Character Showcase",
+    "role": "Sound Redesign / Mix",
+    "year": "2026",
+    "description": "导入自本地作品文件夹，可在上传与排版区域继续编辑说明、标签和展示顺序。",
+    "tags": [
+      "character",
+      "showcase"
+    ],
+    "mediaUrl": "assets/works/work-11.mp4",
+    "posterUrl": "assets/thumbs/work-11.jpg",
+    "fileName": "诺拉idleshow音效展示_batch.mp4",
+    "fileType": "video/mp4",
+    "createdAt": 11
+  },
+  {
+    "id": "source-12",
+    "title": "桃桃idleshow音效展示",
+    "category": "Character Showcase",
+    "role": "Sound Redesign / Mix",
+    "year": "2026",
+    "description": "导入自本地作品文件夹，可在上传与排版区域继续编辑说明、标签和展示顺序。",
+    "tags": [
+      "character",
+      "showcase"
+    ],
+    "mediaUrl": "assets/works/work-12.mp4",
+    "posterUrl": "assets/thumbs/work-12.jpg",
+    "fileName": "桃桃idleshow音效展示_batch.mp4",
+    "fileType": "video/mp4",
+    "createdAt": 12
+  },
+  {
+    "id": "source-13",
+    "title": "Ambisonic环境实录展示",
+    "category": "Ambience",
+    "role": "Field Recording / Ambience Design",
+    "year": "2026",
+    "description": "导入自本地作品文件夹，可在上传与排版区域继续编辑说明、标签和展示顺序。",
+    "tags": [
+      "ambience",
+      "field recording"
+    ],
+    "mediaUrl": "assets/works/work-13-web.mp4",
+    "posterUrl": "assets/thumbs/work-13.jpg",
+    "fileName": "Ambisonic环境实录展示_batch.mp4",
+    "fileType": "video/mp4",
+    "createdAt": 13
+  }
+]

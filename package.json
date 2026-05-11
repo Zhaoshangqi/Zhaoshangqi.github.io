@@ -1,0 +1,16 @@
+{
+  "name": "audio-designer-portfolio-web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build:static": "node scripts/export-static.js",
+    "import:videos": "node scripts/import-videos.js",
+    "build:hero": "node scripts/build-hero-video.js"
+  },
+  "devDependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "sharp": "^0.34.5"
+  }
+}

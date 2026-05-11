@@ -1,0 +1,10 @@
+node_modules/
+dist/
+output/
+.playwright-cli/
+
+assets/hero/frames/
+assets/hero/svg-frames/
+assets/works/work-13.mp4
+
+*.log
