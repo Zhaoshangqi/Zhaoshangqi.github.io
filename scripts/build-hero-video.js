@@ -5,8 +5,9 @@ const ffmpeg = require("@ffmpeg-installer/ffmpeg");
 const sharp = require("sharp");
 
 const root = path.resolve(__dirname, "..");
-const thumbsDir = path.join(root, "assets", "thumbs");
-const heroDir = path.join(root, "assets", "hero");
+const assetsRoot = path.join(root, "public", "assets");
+const thumbsDir = path.join(assetsRoot, "thumbs");
+const heroDir = path.join(assetsRoot, "hero");
 const framesDir = path.join(heroDir, "frames");
 const svgDir = path.join(heroDir, "svg-frames");
 const heroVideo = path.join(heroDir, "hero-interior-gallery.mp4");

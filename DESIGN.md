@@ -1,47 +1,62 @@
-# Cinematic 3D Gallery Design System
+# Sonic Lab Portfolio Design System
 
-## Philosophy
+## Visual Direction
 
-High-end cinematic portfolio space: a dark 3D interior gallery with polished reflective floors, softly lit wall panels, subtle acoustic-display textures, and calm camera movement. The site should feel premium and spatial, not loud or gimmicky.
+This portfolio presents Zhao Shangqi as a game audio designer through a “sound reactor + audio control console + 3D digital gallery” experience. The site should feel like a professional sound lab for games and cinematic media: restrained, technical, video-first, and memorable through real WebGL interaction.
+
+## Style Keywords
+
+- Neo Bauhaus geometry
+- Game audio portfolio
+- 3D sonic interface
+- WebGL audio visualizer
+- Interactive sound lab
+- Cinematic transitions
+- Futuristic control panel
+- High-end game UI
 
 ## Color Tokens
 
-- Background: `#07080D`
-- Foreground: `#F7F3E8`
-- Card: `rgba(16, 18, 27, 0.82)`
-- Primary accent: `#D8A85A`
-- Secondary accent: `#61D6D0`
-- Deep surface: `#10121B`
-- Default border: `rgba(255,255,255,0.14)`
-- Active border: `rgba(97,214,208,0.55)`
+- Background Black: `#050505`
+- Panel Black: `#101010`
+- Grid Gray: `#2A2A2A`
+- Audio Blue: `#2563EB`
+- Sonic Cyan: `#00FFD1`
+- Signal Green: `#36FF7A`
+- Bauhaus Red: `#FF3B30`
+- Bauhaus Yellow: `#FFD60A`
+- Text White: `#F5F5F5`
+- Text Gray: `#A1A1AA`
 
 ## Typography
 
-- Headings: heavy geometric sans, large but controlled.
-- Body/UI: readable sans or mono fallback for technical labels.
-- Avoid decorative text inside the hero background video.
+- Display: Orbitron-style geometric uppercase fallback
+- Body: Inter/system sans fallback
+- Labels use compact uppercase HUD typography.
+- Chinese copy stays concise and readable against dark glass panels.
 
-## Components
+## Layout
 
-- Buttons: crisp, cinematic, high-contrast, subtle glow.
-- Cards: glassy dark panels, 8px or less radius, clear video-first framing.
-- Inputs: dark professional surfaces with visible focus.
-- Media cards: clean video preview with premium border and restrained hover motion.
-
-## Background And Effects
-
-- Hero background video: high-quality 3D interior design/gallery render style, no authored text, slow camera orbit, centered composition.
-- Use screenshots only as blurred/abstract display textures so they do not become readable text.
-- Add inward vignette / gradient masking to keep text readable.
-- Avoid loud vaporwave scanlines or overwhelming neon unless used very subtly.
+- Loading Intro: sound-field calibration with waveform, percent, scanline, and flash exit.
+- Hero: left identity lockup, center real WebGL Sonic Reactor, right audio HUD, bottom category nav.
+- Works: categorized 3D Video Monitor Wall with hover video preview and project overlay.
+- Detail Overlay: HUD info, large video player, sound design notes, and production timeline.
+- Breakdown: DAW-inspired layer console with WebGL waveform feedback.
+- Pipeline: reference-to-final signal flow.
+- Tools & Systems: geometric control modules.
+- Interactive Lab: experimental audio workflow panels.
+- About / Contact: Audio Designer Console with a 3D sound sphere.
 
 ## Motion
 
-- Slow, premium, cinematic background motion.
-- UI hover motion should be subtle and responsive.
-- Text must remain readable at all times.
+- Default motion is slow and premium: reactor rotation, subtle floating, particles, and signal flicker.
+- Interaction moments are sharp: sonic blast, circular shockwave, screen flash, HUD scan, and monitor lift.
+- Reduced motion must preserve readability and avoid blocking access to content.
 
-## Responsive
+## Interaction Rules
 
-- Keep touch targets at least 44px.
-- Simplify background visibility on mobile while keeping the hero video feeling spatial.
+- Portfolio videos remain the core content.
+- Category filtering must not mutate the works data.
+- WebGL is used for the central reactor, video monitor frames, waveform, and contact sound sphere.
+- Tappable/clickable controls stay at least 44px with visible focus states.
+- The design should avoid generic portfolio templates, flat-only cards, and pure neon cyberpunk excess.

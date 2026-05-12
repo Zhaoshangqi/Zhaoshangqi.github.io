@@ -1,46 +1,47 @@
-# ZSQAudio Portfolio Web App
+# Zhaoshangqi.github.io
 
-本项目是一个本地 Web App，不再通过双击 `index.html` 打开。
+High-end 3D portfolio for a game audio designer / sound designer / PV mixing designer. The site is designed as a “Sonic Lab + Game Audio Console + 3D Digital Gallery” rather than a standard flat portfolio.
 
-## 运行
+## Run Locally
 
 ```powershell
 npm run dev
 ```
 
-浏览器访问：
+Open:
 
 ```text
-http://127.0.0.1:5173
+http://127.0.0.1:5174
 ```
 
-## 使用
-
-- 在“上传与排版”区域添加作品。
-- 支持上传 `video/*` 和 `audio/*` 文件，视频会在作品卡片中直接预览。
-- 可填写标题、类别、职责、年份、说明、标签。
-- 可切换作品排版：网格、紧凑、长卡。
-- 可上移、下移、编辑、删除作品。
-- 当前默认作品来自 `assets/works/` 和 `data/works.json`。
-- Hero 背景视频来自 `assets/hero/hero-interior-gallery.mp4`。
-
-## 数据保存
-
-当前版本把作品信息保存在浏览器 `localStorage`，把视频/音频文件保存在浏览器 `IndexedDB`。
-这适合本机整理作品集。正式上线或发给 HR 前，建议改成后端上传或静态资源路径。
-
-## 重新导入本地视频
+## Build
 
 ```powershell
-npm run import:videos -- "E:\新建文件夹\作品\赵上琦音效作品"
+npm run build
 ```
 
-导入会复制视频到 `assets/works/`，生成封面到 `assets/thumbs/`，并刷新 `data/works.json`。
+The Next.js config exports a static site to `out/` for GitHub Pages.
 
-## 重新生成 Hero 背景视频
+## Stack
 
-```powershell
-npm run build:hero
-```
+- Next.js / React / TypeScript
+- Tailwind CSS with custom global design tokens
+- Three.js, React Three Fiber, Drei
+- Framer Motion, GSAP, Lenis smooth scroll
 
-该脚本会用部分作品封面生成无文字的 Vaporwave / 3D 室内画廊风格背景 MP4。
+## Project Structure
+
+- `src/app/`: Next.js app entry and metadata
+- `src/components/`: Sonic Reactor, WebGL scenes, monitor wall, overlay, pipeline, lab, contact console
+- `src/data/projects.ts`: UI copy, category metadata, tooling, and mapped portfolio data
+- `src/styles/globals.css`: Neo Bauhaus / game-audio console visual system
+- `data/works.json`: unchanged bilingual portfolio metadata
+- `public/assets/`: videos, thumbnails, generated hero media, and static assets
+
+## Content Model
+
+Each work item keeps the existing content and includes:
+
+- `categoryKey`: `foley`, `redesign`, `gameplay`, `ambience`, `elemental`, `character`, or `cinematic`
+- `title`, `role`, `description`, and `tags`: bilingual `zh` / `en` fields
+- `mediaUrl` and `posterUrl`: static asset paths served from `public/assets/`

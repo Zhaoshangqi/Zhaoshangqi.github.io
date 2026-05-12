@@ -1,228 +1,301 @@
 [
   {
     "id": "source-01",
-    "title": "部分合成水音效素材制作",
-    "category": "Foley / Water",
-    "role": "Sound Design Process / Material Editing",
+    "categoryKey": "foley",
+    "title": {
+      "zh": "水声拟音合成流程",
+      "en": "Water Foley Synthesis"
+    },
+    "role": {
+      "zh": "声音设计流程 / 素材编辑",
+      "en": "Sound Design Process / Material Editing"
+    },
     "year": "2026",
-    "description": "导入自本地作品文件夹，可在上传与排版区域继续编辑说明、标签和展示顺序。",
-    "tags": [
-      "water",
-      "foley",
-      "process",
-      "layers"
-    ],
+    "description": {
+      "zh": "展示水声素材分层、瞬态塑形与干净剪辑的制作流程。",
+      "en": "A process reel for layered water textures, transient shaping, and clean material editing."
+    },
+    "tags": {
+      "zh": ["水声", "拟音", "分层", "流程"],
+      "en": ["water", "foley", "layers", "process"]
+    },
     "mediaUrl": "assets/works/work-01.mp4",
-    "posterUrl": "assets/thumbs/work-01.jpg",
-    "fileName": "部分合成水音效素材制作_batch.mp4",
-    "fileType": "video/mp4",
-    "createdAt": 1
+    "posterUrl": "assets/thumbs/work-01.jpg"
   },
   {
     "id": "source-02",
-    "title": "超越善恶2音效贴片",
-    "category": "Sound Redesign",
-    "role": "Sound Redesign / Mix",
+    "categoryKey": "redesign",
+    "title": {
+      "zh": "动作预告片声音重设计",
+      "en": "Action Redesign Trailer"
+    },
+    "role": {
+      "zh": "声音重设计 / 混音",
+      "en": "Sound Redesign / Mix"
+    },
     "year": "2026",
-    "description": "导入自本地作品文件夹，可在上传与排版区域继续编辑说明、标签和展示顺序。",
-    "tags": [
-      "redesign",
-      "sync"
-    ],
+    "description": {
+      "zh": "围绕画面同步、重量感、转场与戏剧重音完成的影像声音重设计。",
+      "en": "A cinematic redesign focused on sync, weight, transitions, and dramatic punctuation."
+    },
+    "tags": {
+      "zh": ["重设计", "同步", "预告片", "混音"],
+      "en": ["redesign", "sync", "trailer", "mix"]
+    },
     "mediaUrl": "assets/works/work-02.mp4",
-    "posterUrl": "assets/thumbs/work-02.jpg",
-    "fileName": "超越善恶2音效贴片_batch.mp4",
-    "fileType": "video/mp4",
-    "createdAt": 2
+    "posterUrl": "assets/thumbs/work-02.jpg"
   },
   {
     "id": "source-03",
-    "title": "打药音效",
-    "category": "Gameplay Feedback",
-    "role": "Sound Design / Editing / Mix",
+    "categoryKey": "gameplay",
+    "title": {
+      "zh": "游戏回血反馈音效",
+      "en": "Gameplay Healing Feedback"
+    },
+    "role": {
+      "zh": "声音设计 / 剪辑 / 混音",
+      "en": "Sound Design / Editing / Mix"
+    },
     "year": "2026",
-    "description": "导入自本地作品文件夹，可在上传与排版区域继续编辑说明、标签和展示顺序。",
-    "tags": [
-      "gameplay",
-      "feedback"
-    ],
+    "description": {
+      "zh": "为游戏操作设计清晰、短促、可重复触发的回血与确认反馈。",
+      "en": "Readable in-game feedback design with quick confirmation, recovery energy, and UI clarity."
+    },
+    "tags": {
+      "zh": ["玩法", "反馈", "界面", "生命值"],
+      "en": ["gameplay", "feedback", "ui", "health"]
+    },
     "mediaUrl": "assets/works/work-03.mp4",
-    "posterUrl": "assets/thumbs/work-03.jpg",
-    "fileName": "打药音效.mp4",
-    "fileType": "video/mp4",
-    "createdAt": 3
+    "posterUrl": "assets/thumbs/work-03.jpg"
   },
   {
     "id": "source-04",
-    "title": "海边实录环境",
-    "category": "Ambience",
-    "role": "Field Recording / Ambience Design",
+    "categoryKey": "ambience",
+    "title": {
+      "zh": "海岸环境声采集",
+      "en": "Coastal Ambience Capture"
+    },
+    "role": {
+      "zh": "实地录音 / 环境声设计",
+      "en": "Field Recording / Ambience Design"
+    },
     "year": "2026",
-    "description": "导入自本地作品文件夹，可在上传与排版区域继续编辑说明、标签和展示顺序。",
-    "tags": [
-      "ambience",
-      "field recording"
-    ],
+    "description": {
+      "zh": "以海岸层次、空间深度与可循环质感构建环境声底。",
+      "en": "Environmental ambience with layered shore movement, depth cues, and loop-ready texture."
+    },
+    "tags": {
+      "zh": ["环境声", "实录", "循环", "质感"],
+      "en": ["ambience", "field", "loop", "texture"]
+    },
     "mediaUrl": "assets/works/work-04.mp4",
-    "posterUrl": "assets/thumbs/work-04.jpg",
-    "fileName": "海边实录环境_batch.mp4",
-    "fileType": "video/mp4",
-    "createdAt": 4
+    "posterUrl": "assets/thumbs/work-04.jpg"
   },
   {
     "id": "source-05",
-    "title": "合成水音效过程展示",
-    "category": "Foley / Water",
-    "role": "Sound Design Process / Material Editing",
+    "categoryKey": "foley",
+    "title": {
+      "zh": "水声分层拆解",
+      "en": "Water Layer Breakdown"
+    },
+    "role": {
+      "zh": "声音设计流程 / 素材编辑",
+      "en": "Sound Design Process / Material Editing"
+    },
     "year": "2026",
-    "description": "导入自本地作品文件夹，可在上传与排版区域继续编辑说明、标签和展示顺序。",
-    "tags": [
-      "water",
-      "foley",
-      "process",
-      "layers"
-    ],
+    "description": {
+      "zh": "拆解水声动作中的素材选择、时间点、塑形和混音判断。",
+      "en": "A breakdown showing source selection, timing, shaping, and mix decisions for water motion."
+    },
+    "tags": {
+      "zh": ["水声", "拆解", "分层", "剪辑"],
+      "en": ["water", "breakdown", "layers", "edit"]
+    },
     "mediaUrl": "assets/works/work-05.mp4",
-    "posterUrl": "assets/thumbs/work-05.jpg",
-    "fileName": "合成水音效过程展示_batch.mp4",
-    "fileType": "video/mp4",
-    "createdAt": 5
+    "posterUrl": "assets/thumbs/work-05.jpg"
   },
   {
     "id": "source-06",
-    "title": "合成水音效展示贴片",
-    "category": "Foley / Water",
-    "role": "Sound Redesign / Mix",
+    "categoryKey": "redesign",
+    "title": {
+      "zh": "水体冲击声音重设计",
+      "en": "Water Impact Redesign"
+    },
+    "role": {
+      "zh": "声音重设计 / 混音",
+      "en": "Sound Redesign / Mix"
+    },
     "year": "2026",
-    "description": "导入自本地作品文件夹，可在上传与排版区域继续编辑说明、标签和展示顺序。",
-    "tags": [
-      "water",
-      "foley",
-      "redesign",
-      "sync"
-    ],
+    "description": {
+      "zh": "画面同步的水体冲击设计，强调主体、细节与尾音控制。",
+      "en": "Screen-synced water impact redesign with splash body, micro detail, and controlled tail energy."
+    },
+    "tags": {
+      "zh": ["水声", "冲击", "同步", "重设计"],
+      "en": ["water", "impact", "sync", "redesign"]
+    },
     "mediaUrl": "assets/works/work-06.mp4",
-    "posterUrl": "assets/thumbs/work-06.jpg",
-    "fileName": "合成水音效展示贴片_batch.mp4",
-    "fileType": "video/mp4",
-    "createdAt": 6
+    "posterUrl": "assets/thumbs/work-06.jpg"
   },
   {
     "id": "source-07",
-    "title": "火合成音效制作",
-    "category": "Elemental",
-    "role": "Sound Design / Editing / Mix",
+    "categoryKey": "elemental",
+    "title": {
+      "zh": "火焰元素音效制作",
+      "en": "Fire Element Craft"
+    },
+    "role": {
+      "zh": "声音设计 / 剪辑 / 混音",
+      "en": "Sound Design / Editing / Mix"
+    },
     "year": "2026",
-    "description": "导入自本地作品文件夹，可在上传与排版区域继续编辑说明、标签和展示顺序。",
-    "tags": [
-      "fire",
-      "elemental"
-    ],
+    "description": {
+      "zh": "由燃烧颗粒、压力、运动感和持续变化的音色层构成火焰元素。",
+      "en": "Elemental fire design built from crackle, pressure, movement, and evolving tonal layers."
+    },
+    "tags": {
+      "zh": ["火焰", "元素", "质感", "运动"],
+      "en": ["fire", "elemental", "texture", "motion"]
+    },
     "mediaUrl": "assets/works/work-07.mp4",
-    "posterUrl": "assets/thumbs/work-07.jpg",
-    "fileName": "火合成音效制作_batch.mp4",
-    "fileType": "video/mp4",
-    "createdAt": 7
+    "posterUrl": "assets/thumbs/work-07.jpg"
   },
   {
     "id": "source-08",
-    "title": "诀尘idleshow音效展示",
-    "category": "Character Showcase",
-    "role": "Sound Redesign / Mix",
+    "categoryKey": "character",
+    "title": {
+      "zh": "角色待机音效 A",
+      "en": "Character Idle Audio A"
+    },
+    "role": {
+      "zh": "声音重设计 / 混音",
+      "en": "Sound Redesign / Mix"
+    },
     "year": "2026",
-    "description": "导入自本地作品文件夹，可在上传与排版区域继续编辑说明、标签和展示顺序。",
-    "tags": [
-      "character",
-      "showcase"
-    ],
+    "description": {
+      "zh": "强调角色个性、动作细节与可循环节奏的待机展示。",
+      "en": "Character idle showcase emphasizing personality, motion detail, and loop-friendly timing."
+    },
+    "tags": {
+      "zh": ["角色", "待机", "展示", "同步"],
+      "en": ["character", "idle", "showcase", "sync"]
+    },
     "mediaUrl": "assets/works/work-08.mp4",
-    "posterUrl": "assets/thumbs/work-08.jpg",
-    "fileName": "诀尘idleshow音效展示_batch.mp4",
-    "fileType": "video/mp4",
-    "createdAt": 8
+    "posterUrl": "assets/thumbs/work-08.jpg"
   },
   {
     "id": "source-09",
-    "title": "魁斗idleshow音效展示",
-    "category": "Character Showcase",
-    "role": "Sound Redesign / Mix",
+    "categoryKey": "character",
+    "title": {
+      "zh": "角色待机音效 B",
+      "en": "Character Idle Audio B"
+    },
+    "role": {
+      "zh": "声音重设计 / 混音",
+      "en": "Sound Redesign / Mix"
+    },
     "year": "2026",
-    "description": "导入自本地作品文件夹，可在上传与排版区域继续编辑说明、标签和展示顺序。",
-    "tags": [
-      "character",
-      "showcase"
-    ],
+    "description": {
+      "zh": "第二组角色待机声音，突出动作点、材质细节与可读节奏。",
+      "en": "A second character idle pass with gesture accents, material detail, and readable rhythm."
+    },
+    "tags": {
+      "zh": ["角色", "动作", "待机", "混音"],
+      "en": ["character", "gesture", "idle", "mix"]
+    },
     "mediaUrl": "assets/works/work-09.mp4",
-    "posterUrl": "assets/thumbs/work-09.jpg",
-    "fileName": "魁斗idleshow音效展示_batch.mp4",
-    "fileType": "video/mp4",
-    "createdAt": 9
+    "posterUrl": "assets/thumbs/work-09.jpg"
   },
   {
     "id": "source-10",
-    "title": "魅影终极皮开场展示",
-    "category": "Cinematic",
-    "role": "Sound Redesign / Mix",
+    "categoryKey": "cinematic",
+    "title": {
+      "zh": "影像开场声音设计",
+      "en": "Cinematic Opening Sequence"
+    },
+    "role": {
+      "zh": "声音重设计 / 混音",
+      "en": "Sound Redesign / Mix"
+    },
     "year": "2026",
-    "description": "导入自本地作品文件夹，可在上传与排版区域继续编辑说明、标签和展示顺序。",
-    "tags": [
-      "sound design"
-    ],
+    "description": {
+      "zh": "围绕尺度、转场能量、重击点和镜头推进完成的影像开场设计。",
+      "en": "A cinematic opening built around scale, transition energy, hit points, and scene momentum."
+    },
+    "tags": {
+      "zh": ["影像", "开场", "预告片", "冲击"],
+      "en": ["cinematic", "opening", "trailer", "impact"]
+    },
     "mediaUrl": "assets/works/work-10.mp4",
-    "posterUrl": "assets/thumbs/work-10.jpg",
-    "fileName": "魅影终极皮开场展示_batch.mp4",
-    "fileType": "video/mp4",
-    "createdAt": 10
+    "posterUrl": "assets/thumbs/work-10.jpg"
   },
   {
     "id": "source-11",
-    "title": "诺拉idleshow音效展示",
-    "category": "Character Showcase",
-    "role": "Sound Redesign / Mix",
+    "categoryKey": "character",
+    "title": {
+      "zh": "角色待机音效 C",
+      "en": "Character Idle Audio C"
+    },
+    "role": {
+      "zh": "声音重设计 / 混音",
+      "en": "Sound Redesign / Mix"
+    },
     "year": "2026",
-    "description": "导入自本地作品文件夹，可在上传与排版区域继续编辑说明、标签和展示顺序。",
-    "tags": [
-      "character",
-      "showcase"
-    ],
+    "description": {
+      "zh": "在机械细节、运动节奏和留白之间取得平衡的角色音效循环。",
+      "en": "A stylized character audio loop balancing mechanical detail, movement, and negative space."
+    },
+    "tags": {
+      "zh": ["角色", "循环", "运动", "展示"],
+      "en": ["character", "loop", "motion", "showcase"]
+    },
     "mediaUrl": "assets/works/work-11.mp4",
-    "posterUrl": "assets/thumbs/work-11.jpg",
-    "fileName": "诺拉idleshow音效展示_batch.mp4",
-    "fileType": "video/mp4",
-    "createdAt": 11
+    "posterUrl": "assets/thumbs/work-11.jpg"
   },
   {
     "id": "source-12",
-    "title": "桃桃idleshow音效展示",
-    "category": "Character Showcase",
-    "role": "Sound Redesign / Mix",
+    "categoryKey": "character",
+    "title": {
+      "zh": "角色待机音效 D",
+      "en": "Character Idle Audio D"
+    },
+    "role": {
+      "zh": "声音重设计 / 混音",
+      "en": "Sound Redesign / Mix"
+    },
     "year": "2026",
-    "description": "导入自本地作品文件夹，可在上传与排版区域继续编辑说明、标签和展示顺序。",
-    "tags": [
-      "character",
-      "showcase"
-    ],
+    "description": {
+      "zh": "更偏精修展示的角色待机片段，强调同步、音色身份和重复观看舒适度。",
+      "en": "A polished idle sequence focused on timing, sonic identity, and repeated-viewing comfort."
+    },
+    "tags": {
+      "zh": ["角色", "身份", "待机", "同步"],
+      "en": ["character", "identity", "idle", "sync"]
+    },
     "mediaUrl": "assets/works/work-12.mp4",
-    "posterUrl": "assets/thumbs/work-12.jpg",
-    "fileName": "桃桃idleshow音效展示_batch.mp4",
-    "fileType": "video/mp4",
-    "createdAt": 12
+    "posterUrl": "assets/thumbs/work-12.jpg"
   },
   {
     "id": "source-13",
-    "title": "Ambisonic环境实录展示",
-    "category": "Ambience",
-    "role": "Field Recording / Ambience Design",
+    "categoryKey": "ambience",
+    "title": {
+      "zh": "Ambisonic 环境声作品",
+      "en": "Ambisonic Environment Reel"
+    },
+    "role": {
+      "zh": "实地录音 / 环境声设计",
+      "en": "Field Recording / Ambience Design"
+    },
     "year": "2026",
-    "description": "导入自本地作品文件夹，可在上传与排版区域继续编辑说明、标签和展示顺序。",
-    "tags": [
-      "ambience",
-      "field recording"
-    ],
+    "description": {
+      "zh": "由环境采集、空间运动与质感控制构建的沉浸式环境声作品。",
+      "en": "An immersive ambience reel built from environmental capture, spatial motion, and texture control."
+    },
+    "tags": {
+      "zh": ["空间声", "环境声", "实录", "空间"],
+      "en": ["ambisonic", "ambience", "field", "space"]
+    },
     "mediaUrl": "assets/works/work-13-web.mp4",
-    "posterUrl": "assets/thumbs/work-13.jpg",
-    "fileName": "Ambisonic环境实录展示_batch.mp4",
-    "fileType": "video/mp4",
-    "createdAt": 13
+    "posterUrl": "assets/thumbs/work-13.jpg"
   }
 ]

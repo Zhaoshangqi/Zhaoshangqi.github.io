@@ -5,8 +5,9 @@ const ffmpeg = require("@ffmpeg-installer/ffmpeg");
 
 const sourceDir = process.argv[2];
 const root = path.resolve(__dirname, "..");
-const worksDir = path.join(root, "assets", "works");
-const thumbsDir = path.join(root, "assets", "thumbs");
+const assetsRoot = path.join(root, "public", "assets");
+const worksDir = path.join(assetsRoot, "works");
+const thumbsDir = path.join(assetsRoot, "thumbs");
 const dataDir = path.join(root, "data");
 const outJson = path.join(dataDir, "works.json");
 
