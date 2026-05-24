@@ -4,7 +4,6 @@ import Lenis from "lenis";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
 import ImmersiveField3D from "@/components/ImmersiveField3D";
-import MonitorFrame3D from "@/components/MonitorFrame3D";
 import SonicReactor from "@/components/SonicReactor";
 import SoundSphere from "@/components/SoundSphere";
 import Waveform3D from "@/components/Waveform3D";
@@ -406,9 +405,6 @@ function ProjectCard3D({ project, index, lang, onOpen, onHover }: ProjectCardPro
       whileHover={{ y: -16, rotateX: 2, rotateY: index % 2 ? -3 : 3 }}
       transition={{ type: "spring", stiffness: 180, damping: 18 }}
     >
-      <div className="monitor-frame">
-        <MonitorFrame3D color={meta.accent} />
-      </div>
       <video ref={videoRef} src={project.mediaUrl} poster={project.posterUrl} muted loop playsInline preload="metadata" />
       <div className="monitor-overlay">
         <span>{String(index + 1).padStart(2, "0")}</span>

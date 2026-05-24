@@ -1216,16 +1216,10 @@ button {
   grid-column: span 6;
 }
 
-.monitor-frame,
 .project-monitor video,
 .monitor-overlay {
   position: absolute;
   inset: 0;
-}
-
-.monitor-frame {
-  z-index: 2;
-  pointer-events: none;
 }
 
 .project-monitor video {
