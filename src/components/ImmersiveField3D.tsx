@@ -11,7 +11,7 @@ type ImmersiveField3DProps = {
   imageUrl?: string;
 };
 
-const palette = ["#ff0080", "#9d00ff", "#00ccff", "#ffcc00"];
+const palette = ["#00ccff", "#00ffd1", "#9d00ff", "#ff0080"];
 
 function usePointerState() {
   const state = useRef({
@@ -72,7 +72,7 @@ function usePointerState() {
   return state;
 }
 
-function ParticleField({
+function AudioSignalField({
   activeColor,
   blastKey = 0,
 }: {
@@ -84,45 +84,56 @@ function ParticleField({
   const lastBlastKey = useRef(blastKey);
   const localBlast = useRef(-10);
 
-  const particleSet = useMemo(() => {
-    const count = typeof window !== "undefined" && window.innerWidth < 760 ? 2800 : 5600;
+  const signalSet = useMemo(() => {
+    const compact = typeof window !== "undefined" && window.innerWidth < 760;
+    const lanes = compact ? 4 : 6;
+    const samples = compact ? 150 : 240;
+    const count = lanes * samples;
     const positions = new Float32Array(count * 3);
     const colors = new Float32Array(count * 3);
-    const velocities = new Float32Array(count * 3);
     const origins = new Float32Array(count * 3);
+    const phases = new Float32Array(count);
+    const amplitudes = new Float32Array(count);
+    const lanesByIndex = new Float32Array(count);
     const masses = new Float32Array(count);
     const color = new THREE.Color();
+    const accent = new THREE.Color(activeColor);
 
-    for (let index = 0; index < count; index += 1) {
-      const depth = (Math.random() - 0.5) * 14;
-      const radius = 1.2 + Math.random() * 8.5;
-      const angle = Math.random() * Math.PI * 2;
-      const height = (Math.random() - 0.5) * 5.6;
-      const x = Math.cos(angle) * radius + (Math.random() - 0.5) * 2.2;
-      const y = height;
-      const z = Math.sin(angle) * radius + depth;
+    for (let lane = 0; lane < lanes; lane += 1) {
+      for (let sample = 0; sample < samples; sample += 1) {
+        const index = lane * samples + sample;
+        const offset = index * 3;
+        const progress = sample / (samples - 1);
+        const laneOffset = lane - (lanes - 1) / 2;
+        const x = (progress - 0.5) * 12.8;
+        const y = laneOffset * 0.58 + Math.sin(progress * Math.PI * 2 + lane) * 0.12;
+        const z = -4.6 + lane * 0.42 + Math.sin(progress * Math.PI * 4 + lane) * 0.16;
 
-      origins[index * 3] = x;
-      origins[index * 3 + 1] = y;
-      origins[index * 3 + 2] = z;
+        origins[offset] = x;
+        origins[offset + 1] = y;
+        origins[offset + 2] = z;
 
-      positions[index * 3] = x * 0.08;
-      positions[index * 3 + 1] = y * 0.08;
-      positions[index * 3 + 2] = z * 0.08;
+        positions[offset] = x;
+        positions[offset + 1] = y;
+        positions[offset + 2] = z;
 
-      color.set(palette[index % palette.length]);
-      colors[index * 3] = color.r;
-      colors[index * 3 + 1] = color.g;
-      colors[index * 3 + 2] = color.b;
-      masses[index] = 0.5 + Math.random() * 0.7;
+        color.set(palette[(lane + sample) % palette.length]).lerp(accent, lane % 2 ? 0.28 : 0.12);
+        colors[offset] = color.r;
+        colors[offset + 1] = color.g;
+        colors[offset + 2] = color.b;
+        phases[index] = progress * Math.PI * 7 + lane * 0.9;
+        amplitudes[index] = 0.08 + (lane % 3) * 0.035 + Math.sin(progress * Math.PI) * 0.16;
+        lanesByIndex[index] = lane;
+        masses[index] = 0.72 + lane * 0.05;
+      }
     }
 
     const geometry = new THREE.BufferGeometry();
     geometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
     geometry.setAttribute("color", new THREE.BufferAttribute(colors, 3));
 
-    return { count, geometry, origins, velocities, masses };
-  }, []);
+    return { count, geometry, origins, phases, amplitudes, lanesByIndex, masses };
+  }, [activeColor]);
 
   useFrame((state, delta) => {
     if (!points.current) return;
@@ -132,43 +143,36 @@ function ParticleField({
       lastBlastKey.current = blastKey;
     }
 
-    const position = particleSet.geometry.attributes.position as THREE.BufferAttribute;
+    const position = signalSet.geometry.attributes.position as THREE.BufferAttribute;
     const positions = position.array as Float32Array;
-    const { origins, velocities, masses, count } = particleSet;
+    const { origins, phases, amplitudes, lanesByIndex, masses, count } = signalSet;
     const elapsed = state.clock.elapsedTime;
     const pointer = pointerState.current;
-    const attractX = pointer.x * 5.4;
-    const attractY = pointer.y * 3.1;
     const globalBlastAge = elapsed - localBlast.current;
     const clickBlastAge = elapsed - pointer.blastAt;
     const intro = Math.min(1, elapsed / 3);
-    const introSpread = 0.08 + intro * intro * 0.92;
+    const introSpread = 0.55 + intro * intro * 0.45;
+    const movementEnergy = THREE.MathUtils.clamp(pointer.speed / 900, 0, 1);
 
     for (let index = 0; index < count; index += 1) {
       const offset = index * 3;
       const mass = masses[index];
+      const lane = lanesByIndex[index];
+      const phase = phases[index];
+      const amplitude = amplitudes[index] * (1 + movementEnergy * 0.45);
       const ox = origins[offset] * introSpread;
-      const oy = origins[offset + 1] * introSpread;
-      const oz = origins[offset + 2] * introSpread + pointer.wheelDepth;
-      const x = positions[offset];
-      const y = positions[offset + 1];
-      const z = positions[offset + 2];
-      const dx = attractX - x;
-      const dy = attractY - y;
-      const distance = Math.max(0.001, Math.hypot(dx, dy));
-
-      let force = 0;
-      if (distance < 0.9) force = 0.52;
-      else if (distance < 2.7) force = -0.11;
-
-      velocities[offset] += (ox - x) * 0.015 * mass + (dx / distance) * force * delta;
-      velocities[offset + 1] += (oy - y) * 0.015 * mass + (dy / distance) * force * delta;
-      velocities[offset + 2] += (oz - z) * 0.012 * mass;
-
-      if (pointer.speed > 50 && distance < 2.2) {
-        velocities[offset] -= dx * 0.018;
-        velocities[offset + 1] -= dy * 0.018;
-      }
+      const oy =
+        origins[offset + 1] +
+        Math.sin(phase + elapsed * (1.25 + lane * 0.11)) * amplitude +
+        Math.sin(phase * 0.37 + elapsed * 0.68) * amplitude * 0.42 +
+        pointer.y * 0.08 * mass;
+      const oz =
+        origins[offset + 2] +
+        Math.cos(phase * 0.62 + elapsed * 0.52) * 0.12 +
+        pointer.wheelDepth * 0.18;
+      let x = ox + pointer.x * 0.08 * (lane - 2);
+      let y = oy;
+      let z = oz;
 
       if (clickBlastAge > 0 && clickBlastAge < 1) {
         const cx = pointer.clickX * 5.4;
@@ -176,119 +180,162 @@ function ParticleField({
         const bx = x - cx;
         const by = y - cy;
         const bd = Math.max(0.15, Math.hypot(bx, by));
-        const power = (1 - clickBlastAge) * 0.085;
-        velocities[offset] += (bx / bd) * power;
-        velocities[offset + 1] += (by / bd) * power;
-        velocities[offset + 2] += Math.sin(index + elapsed) * power;
+        const power = (1 - clickBlastAge) * 0.32;
+        x += (bx / bd) * power;
+        y += (by / bd) * power;
+        z += Math.sin(index + elapsed) * power * 0.2;
       }
 
       if (globalBlastAge > 0 && globalBlastAge < 1.1) {
-        const pulse = (1 - globalBlastAge / 1.1) * 0.06;
-        velocities[offset] += Math.cos(index) * pulse;
-        velocities[offset + 1] += Math.sin(index * 1.7) * pulse;
+        const pulse = (1 - globalBlastAge / 1.1) * 0.24;
+        y += Math.sin(phase + globalBlastAge * Math.PI * 4) * pulse;
+        z += Math.cos(phase) * pulse * 0.28;
       }
 
-      velocities[offset] *= 0.84;
-      velocities[offset + 1] *= 0.84;
-      velocities[offset + 2] *= 0.86;
-
-      positions[offset] += velocities[offset] * 60 * delta;
-      positions[offset + 1] += velocities[offset + 1] * 60 * delta;
-      positions[offset + 2] += velocities[offset + 2] * 60 * delta;
-
-      if (Math.abs(positions[offset]) > 9.4) velocities[offset] *= -0.48;
-      if (Math.abs(positions[offset + 1]) > 5.2) velocities[offset + 1] *= -0.48;
+      const smoothing = Math.min(1, delta * 8);
+      positions[offset] = THREE.MathUtils.lerp(positions[offset], x, smoothing);
+      positions[offset + 1] = THREE.MathUtils.lerp(positions[offset + 1], y, smoothing);
+      positions[offset + 2] = THREE.MathUtils.lerp(positions[offset + 2], z, smoothing);
     }
 
     position.needsUpdate = true;
-    points.current.rotation.y = Math.sin(elapsed * 0.18) * 0.06 + pointer.x * 0.08;
-    points.current.rotation.x = pointer.y * 0.05;
+    points.current.rotation.y = Math.sin(elapsed * 0.14) * 0.035 + pointer.x * 0.045;
+    points.current.rotation.x = pointer.y * 0.025;
   });
 
   return (
     <>
-      <points ref={points} geometry={particleSet.geometry}>
+      <points ref={points} geometry={signalSet.geometry}>
         <pointsMaterial
           vertexColors
-          size={0.035}
+          size={0.03}
           transparent
-          opacity={0.72}
+          opacity={0.48}
           blending={THREE.AdditiveBlending}
           depthWrite={false}
         />
       </points>
-      <GlassMechanism activeColor={activeColor} />
+      <AudioDesignRig activeColor={activeColor} />
     </>
   );
 }
 
-function GlassMechanism({ activeColor }: { activeColor: string }) {
+function AudioDesignRig({ activeColor }: { activeColor: string }) {
   const group = useRef<THREE.Group>(null);
-  const tubes = useRef<Array<THREE.Mesh | null>>([]);
+  const rings = useRef<Array<THREE.Mesh | null>>([]);
+  const meters = useRef<Array<THREE.Mesh | null>>([]);
+  const waveLines = useMemo(() => {
+    const samples = 96;
+    return Array.from({ length: 4 }, (_, index) => {
+      const geometry = new THREE.BufferGeometry();
+      geometry.setAttribute("position", new THREE.BufferAttribute(new Float32Array(samples * 3), 3));
+      const material = new THREE.LineBasicMaterial({
+        color: index % 2 ? activeColor : "#00ccff",
+        transparent: true,
+        opacity: 0.32 - index * 0.035,
+        blending: THREE.AdditiveBlending,
+        depthWrite: false,
+      });
+      return { geometry, line: new THREE.Line(geometry, material) };
+    });
+  }, [activeColor]);
 
   useFrame((state) => {
     if (!group.current) return;
-    group.current.rotation.y = state.pointer.x * 0.18 + state.clock.elapsedTime * 0.025;
-    group.current.rotation.x = state.pointer.y * 0.12;
-    group.current.position.z = Math.sin(state.clock.elapsedTime * 0.34) * 0.35;
+    const elapsed = state.clock.elapsedTime;
+    group.current.rotation.y = state.pointer.x * 0.09 + Math.sin(elapsed * 0.16) * 0.035;
+    group.current.rotation.x = state.pointer.y * 0.055;
+    group.current.position.z = Math.sin(elapsed * 0.24) * 0.18;
 
-    tubes.current.forEach((tube, index) => {
-      if (!tube) return;
-      tube.rotation.z = Math.sin(state.clock.elapsedTime * 0.6 + index) * 0.26;
+    rings.current.forEach((ring, index) => {
+      if (!ring) return;
+      ring.rotation.z = elapsed * (0.045 + index * 0.012);
+      ring.rotation.x = Math.PI / 2 + Math.sin(elapsed * 0.18 + index) * 0.08;
+      ring.scale.setScalar(1 + Math.sin(elapsed * 0.9 + index) * 0.018);
+    });
+
+    meters.current.forEach((bar, index) => {
+      if (!bar) return;
+      const band = 0.22 + Math.abs(Math.sin(elapsed * 1.45 + index * 0.37)) * 1.25;
+      bar.scale.y = THREE.MathUtils.lerp(bar.scale.y, band, 0.12);
+    });
+
+    waveLines.forEach(({ geometry }, lane) => {
+      const attribute = geometry.attributes.position as THREE.BufferAttribute;
+      const positions = attribute.array as Float32Array;
+      const samples = positions.length / 3;
+      for (let sample = 0; sample < samples; sample += 1) {
+        const offset = sample * 3;
+        const progress = sample / (samples - 1);
+        positions[offset] = (progress - 0.5) * 7.8;
+        positions[offset + 1] =
+          (lane - 1.5) * 0.34 +
+          Math.sin(progress * Math.PI * (4 + lane) + elapsed * (1 + lane * 0.12)) * (0.08 + lane * 0.02);
+        positions[offset + 2] = -1.9 - lane * 0.16 + Math.sin(progress * Math.PI * 2 + elapsed * 0.22) * 0.04;
+      }
+      attribute.needsUpdate = true;
     });
   });
 
   return (
-    <group ref={group} position={[0, 0, -1.8]}>
-      <mesh position={[0, 0, -2.2]} rotation={[0.35, 0.18, -0.08]}>
-        <boxGeometry args={[4.8, 2.8, 0.16]} />
+    <group ref={group} position={[0, -0.05, -1.8]}>
+      <mesh position={[0, 0, -2.45]} rotation={[0.28, 0.08, -0.03]}>
+        <boxGeometry args={[5.8, 2.45, 0.12]} />
         <meshPhysicalMaterial
           color="#111111"
           roughness={0.2}
-          metalness={0.22}
-          transmission={0.55}
+          metalness={0.18}
+          transmission={0.48}
           transparent
-          opacity={0.18}
+          opacity={0.13}
           clearcoat={1}
           clearcoatRoughness={0.2}
           emissive={activeColor}
-          emissiveIntensity={0.2}
+          emissiveIntensity={0.1}
         />
       </mesh>
-      {Array.from({ length: 10 }, (_, index) => {
-        const x = (index - 4.5) * 0.62;
+      {waveLines.map(({ line }, index) => (
+        <primitive key={`waveform-${index}`} object={line} />
+      ))}
+      {Array.from({ length: 5 }, (_, index) => (
+        <mesh
+          key={`field-ring-${index}`}
+          ref={(node) => {
+            rings.current[index] = node;
+          }}
+          position={[0, 0.05, -2.05 - index * 0.12]}
+          rotation={[Math.PI / 2, 0, index * 0.2]}
+        >
+          <torusGeometry args={[1.1 + index * 0.42, 0.006, 10, 160]} />
+          <meshBasicMaterial
+            color={index % 2 ? activeColor : "#00ffd1"}
+            transparent
+            opacity={0.18 - index * 0.02}
+            blending={THREE.AdditiveBlending}
+            depthWrite={false}
+          />
+        </mesh>
+      ))}
+      {Array.from({ length: 30 }, (_, index) => {
+        const x = (index - 14.5) * 0.18;
+        const hot = index % 7 === 0;
         return (
           <mesh
-            key={`tube-${index}`}
+            key={`meter-${index}`}
             ref={(node) => {
-              tubes.current[index] = node;
+              meters.current[index] = node;
             }}
-            position={[x, Math.sin(index) * 0.55, -1.4 + (index % 2) * 0.2]}
-            rotation={[Math.PI / 2, 0, index * 0.32]}
+            position={[x, -1.28, -1.62]}
           >
-            <cylinderGeometry args={[0.025, 0.04, 2.6, 16]} />
+            <boxGeometry args={[0.055, 0.52, 0.035]} />
             <meshStandardMaterial
-              color={index % 2 ? "#ff0080" : "#9d00ff"}
-              emissive={index % 2 ? "#ff0080" : "#9d00ff"}
-              emissiveIntensity={1.35}
-              roughness={0.32}
-              metalness={0.8}
-            />
-          </mesh>
-        );
-      })}
-      {Array.from({ length: 26 }, (_, index) => {
-        const row = Math.floor(index / 7);
-        const col = index % 7;
-        return (
-          <mesh key={`hex-${index}`} position={[(col - 3) * 0.55, (row - 1.8) * 0.48, -1.15]}>
-            <circleGeometry args={[0.14, 6]} />
-            <meshBasicMaterial
-              color="#00ccff"
+              color={hot ? "#ff0080" : "#00ccff"}
+              emissive={hot ? "#ff0080" : activeColor}
+              emissiveIntensity={hot ? 0.95 : 0.7}
               transparent
-              opacity={0.14 + ((index % 4) * 0.035)}
-              blending={THREE.AdditiveBlending}
-              side={THREE.DoubleSide}
+              opacity={0.55}
+              roughness={0.4}
+              metalness={0.55}
             />
           </mesh>
         );
@@ -306,8 +353,8 @@ function ImageParticlePlane({ imageUrl, activeColor }: { imageUrl: string; activ
     const geometry = new THREE.BufferGeometry();
     if (!image?.width || !image?.height) return geometry;
 
-    const sampleWidth = 104;
-    const sampleHeight = 58;
+    const sampleWidth = 78;
+    const sampleHeight = 44;
     const canvas = document.createElement("canvas");
     canvas.width = sampleWidth;
     canvas.height = sampleHeight;
@@ -321,8 +368,8 @@ function ImageParticlePlane({ imageUrl, activeColor }: { imageUrl: string; activ
     const base = new THREE.Color(activeColor);
     const color = new THREE.Color();
 
-    for (let y = 0; y < sampleHeight; y += 2) {
-      for (let x = 0; x < sampleWidth; x += 2) {
+    for (let y = 0; y < sampleHeight; y += 3) {
+      for (let x = 0; x < sampleWidth; x += 3) {
         const offset = (y * sampleWidth + x) * 4;
         const r = data[offset] / 255;
         const g = data[offset + 1] / 255;
@@ -331,9 +378,9 @@ function ImageParticlePlane({ imageUrl, activeColor }: { imageUrl: string; activ
         if (brightness < 0.06) continue;
 
         positions.push(
-          (x / sampleWidth - 0.5) * 7.6,
-          -(y / sampleHeight - 0.5) * 4.25,
-          (brightness - 0.5) * 0.72 + (Math.random() - 0.5) * 0.22,
+          (x / sampleWidth - 0.5) * 6.6,
+          -(y / sampleHeight - 0.5) * 3.75,
+          (brightness - 0.5) * 0.42 + (Math.random() - 0.5) * 0.12,
         );
 
         color.setRGB(r, g, b).lerp(base, 0.18);
@@ -348,19 +395,19 @@ function ImageParticlePlane({ imageUrl, activeColor }: { imageUrl: string; activ
 
   useFrame((state) => {
     if (!points.current) return;
-    points.current.rotation.y = -0.24 + state.pointer.x * 0.08 + Math.sin(state.clock.elapsedTime * 0.24) * 0.025;
-    points.current.rotation.x = 0.12 + state.pointer.y * 0.045;
-    points.current.position.z = -3.4 + Math.sin(state.clock.elapsedTime * 0.42) * 0.18;
+    points.current.rotation.y = -0.2 + state.pointer.x * 0.05 + Math.sin(state.clock.elapsedTime * 0.18) * 0.018;
+    points.current.rotation.x = 0.08 + state.pointer.y * 0.025;
+    points.current.position.z = -4.1 + Math.sin(state.clock.elapsedTime * 0.32) * 0.12;
   });
 
   return (
-    <group position={[0, 0.04, -3.4]} rotation={[0.12, -0.24, -0.08]}>
+    <group position={[0, 0.04, -4.1]} rotation={[0.08, -0.2, -0.06]}>
       <points ref={points} geometry={geometry}>
         <pointsMaterial
           vertexColors
-          size={0.058}
+          size={0.038}
           transparent
-          opacity={0.78}
+          opacity={0.36}
           blending={THREE.AdditiveBlending}
           depthWrite={false}
         />
@@ -393,7 +440,7 @@ export default function ImmersiveField3D({
             <ImageParticlePlane imageUrl={imageUrl} activeColor={activeColor} />
           </Suspense>
         ) : null}
-        <ParticleField activeColor={activeColor} blastKey={blastKey} />
+        <AudioSignalField activeColor={activeColor} blastKey={blastKey} />
       </Canvas>
     </div>
   );
