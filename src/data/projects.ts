@@ -28,8 +28,8 @@ export type Project = {
 
 export const projects = (rawProjects as Project[]).map((project) => ({
   ...project,
-  mediaUrl: `/${project.mediaUrl}`,
-  posterUrl: `/${project.posterUrl}`,
+  mediaUrl: project.mediaUrl,
+  posterUrl: project.posterUrl,
 }));
 
 export const personalProfile = {
@@ -57,8 +57,8 @@ export const personalProfile = {
     en: "5 years in game audio",
   },
   started: "2021",
-  avatarUrl: "/zhao-shangqi-profile.png",
-  resumeUrl: "/zhao-shangqi-audio-designer-resume.pdf",
+  avatarUrl: "zhao-shangqi-profile.png",
+  resumeUrl: "zhao-shangqi-audio-designer-resume.pdf",
   summary: {
     zh: "专注游戏音效设计、Foley、交互反馈、环境声与 PV 混音。具备 UE+Wwise、CRI、Unity 项目集成经验，并能从素材采集、合成器设计、分层剪辑到引擎内调试完成完整声音落地。",
     en: "Focused on game SFX, Foley, interaction feedback, ambience, and PV mixing. Experienced with UE+Wwise, CRI, and Unity pipelines, from source capture and synthesis to layered editing, middleware integration, and in-engine tuning.",
@@ -160,7 +160,7 @@ export const categoryMeta: Record<
       en: "Character Idleshow, healing feedback, skin openings, monetization, and gameplay feedback SFX.",
     },
     accent: "#00FFD1",
-    backgroundUrl: "/farlight84-background.webp",
+    backgroundUrl: "farlight84-background.webp",
   },
 };
 

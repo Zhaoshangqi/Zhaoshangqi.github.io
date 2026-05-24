@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "A high-end 3D sonic laboratory portfolio for game audio design, sound design, and cinematic mixing.",
   icons: {
-    icon: "/favicon.svg",
+    icon: "favicon.svg",
   },
 };
 
