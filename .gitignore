@@ -4,9 +4,9 @@ out/
 dist/
 output/
 .playwright-cli/
+/assets/
 
 public/assets/hero/frames/
 public/assets/hero/svg-frames/
-public/assets/works/work-13.mp4
 
 *.log

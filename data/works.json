@@ -1,301 +1,431 @@
 [
   {
     "id": "source-01",
-    "categoryKey": "foley",
+    "categoryKey": "cg",
     "title": {
-      "zh": "水声拟音合成流程",
-      "en": "Water Foley Synthesis"
+      "zh": "超越善恶2音效贴片",
+      "en": "Beyond Good & Evil 2 SFX Redesign"
     },
     "role": {
-      "zh": "声音设计流程 / 素材编辑",
-      "en": "Sound Design Process / Material Editing"
+      "zh": "声音重设计 / 画面同步混音",
+      "en": "Sound Redesign / Picture Sync Mix"
     },
     "year": "2026",
     "description": {
-      "zh": "展示水声素材分层、瞬态塑形与干净剪辑的制作流程。",
-      "en": "A process reel for layered water textures, transient shaping, and clean material editing."
+      "zh": "基于 CG 画面节奏、镜头推进、冲击点和转场能量完成声音贴片设计。",
+      "en": "A CG redesign pass built around picture rhythm, camera motion, impact points, and transition energy."
     },
     "tags": {
-      "zh": ["水声", "拟音", "分层", "流程"],
-      "en": ["water", "foley", "layers", "process"]
+      "zh": [
+        "CG贴片",
+        "声音重设计",
+        "同步",
+        "混音"
+      ],
+      "en": [
+        "cg",
+        "redesign",
+        "sync",
+        "mix"
+      ]
     },
     "mediaUrl": "assets/works/work-01.mp4",
     "posterUrl": "assets/thumbs/work-01.jpg"
   },
   {
     "id": "source-02",
-    "categoryKey": "redesign",
+    "categoryKey": "synthesis",
     "title": {
-      "zh": "动作预告片声音重设计",
-      "en": "Action Redesign Trailer"
+      "zh": "部分合成水音效素材制作",
+      "en": "Water Synthesis Source Materials"
     },
     "role": {
-      "zh": "声音重设计 / 混音",
-      "en": "Sound Redesign / Mix"
+      "zh": "合成器音效 / 素材制作",
+      "en": "Synth SFX / Source Design"
     },
     "year": "2026",
     "description": {
-      "zh": "围绕画面同步、重量感、转场与戏剧重音完成的影像声音重设计。",
-      "en": "A cinematic redesign focused on sync, weight, transitions, and dramatic punctuation."
+      "zh": "使用合成器、效果器和分层处理构建水、火与技能类音色素材。",
+      "en": "Synthesizer, FX, and layered processing for water, fire, and skill-oriented source design."
     },
     "tags": {
-      "zh": ["重设计", "同步", "预告片", "混音"],
-      "en": ["redesign", "sync", "trailer", "mix"]
+      "zh": [
+        "合成器",
+        "技能音效",
+        "水",
+        "火"
+      ],
+      "en": [
+        "synthesis",
+        "skill sfx",
+        "water",
+        "fire"
+      ]
     },
     "mediaUrl": "assets/works/work-02.mp4",
     "posterUrl": "assets/thumbs/work-02.jpg"
   },
   {
     "id": "source-03",
-    "categoryKey": "gameplay",
+    "categoryKey": "synthesis",
     "title": {
-      "zh": "游戏回血反馈音效",
-      "en": "Gameplay Healing Feedback"
+      "zh": "合成水音效过程展示",
+      "en": "Synthesized Water SFX Process"
     },
     "role": {
-      "zh": "声音设计 / 剪辑 / 混音",
-      "en": "Sound Design / Editing / Mix"
+      "zh": "合成器音效 / 素材制作",
+      "en": "Synth SFX / Source Design"
     },
     "year": "2026",
     "description": {
-      "zh": "为游戏操作设计清晰、短促、可重复触发的回血与确认反馈。",
-      "en": "Readable in-game feedback design with quick confirmation, recovery energy, and UI clarity."
+      "zh": "使用合成器、效果器和分层处理构建水、火与技能类音色素材。",
+      "en": "Synthesizer, FX, and layered processing for water, fire, and skill-oriented source design."
     },
     "tags": {
-      "zh": ["玩法", "反馈", "界面", "生命值"],
-      "en": ["gameplay", "feedback", "ui", "health"]
+      "zh": [
+        "合成器",
+        "技能音效",
+        "水",
+        "火"
+      ],
+      "en": [
+        "synthesis",
+        "skill sfx",
+        "water",
+        "fire"
+      ]
     },
     "mediaUrl": "assets/works/work-03.mp4",
     "posterUrl": "assets/thumbs/work-03.jpg"
   },
   {
     "id": "source-04",
-    "categoryKey": "ambience",
+    "categoryKey": "synthesis",
     "title": {
-      "zh": "海岸环境声采集",
-      "en": "Coastal Ambience Capture"
+      "zh": "合成水音效展示贴片",
+      "en": "Synthesized Water SFX Showcase"
     },
     "role": {
-      "zh": "实地录音 / 环境声设计",
-      "en": "Field Recording / Ambience Design"
+      "zh": "合成器音效 / 素材制作",
+      "en": "Synth SFX / Source Design"
     },
     "year": "2026",
     "description": {
-      "zh": "以海岸层次、空间深度与可循环质感构建环境声底。",
-      "en": "Environmental ambience with layered shore movement, depth cues, and loop-ready texture."
+      "zh": "使用合成器、效果器和分层处理构建水、火与技能类音色素材。",
+      "en": "Synthesizer, FX, and layered processing for water, fire, and skill-oriented source design."
     },
     "tags": {
-      "zh": ["环境声", "实录", "循环", "质感"],
-      "en": ["ambience", "field", "loop", "texture"]
+      "zh": [
+        "合成器",
+        "技能音效",
+        "水",
+        "火"
+      ],
+      "en": [
+        "synthesis",
+        "skill sfx",
+        "water",
+        "fire"
+      ]
     },
     "mediaUrl": "assets/works/work-04.mp4",
     "posterUrl": "assets/thumbs/work-04.jpg"
   },
   {
     "id": "source-05",
-    "categoryKey": "foley",
+    "categoryKey": "synthesis",
     "title": {
-      "zh": "水声分层拆解",
-      "en": "Water Layer Breakdown"
+      "zh": "火合成音效制作",
+      "en": "Fire Synthesis Design"
     },
     "role": {
-      "zh": "声音设计流程 / 素材编辑",
-      "en": "Sound Design Process / Material Editing"
+      "zh": "合成器音效 / 素材制作",
+      "en": "Synth SFX / Source Design"
     },
     "year": "2026",
     "description": {
-      "zh": "拆解水声动作中的素材选择、时间点、塑形和混音判断。",
-      "en": "A breakdown showing source selection, timing, shaping, and mix decisions for water motion."
+      "zh": "使用合成器、效果器和分层处理构建水、火与技能类音色素材。",
+      "en": "Synthesizer, FX, and layered processing for water, fire, and skill-oriented source design."
     },
     "tags": {
-      "zh": ["水声", "拆解", "分层", "剪辑"],
-      "en": ["water", "breakdown", "layers", "edit"]
+      "zh": [
+        "合成器",
+        "技能音效",
+        "水",
+        "火"
+      ],
+      "en": [
+        "synthesis",
+        "skill sfx",
+        "water",
+        "fire"
+      ]
     },
     "mediaUrl": "assets/works/work-05.mp4",
     "posterUrl": "assets/thumbs/work-05.jpg"
   },
   {
     "id": "source-06",
-    "categoryKey": "redesign",
+    "categoryKey": "field",
     "title": {
-      "zh": "水体冲击声音重设计",
-      "en": "Water Impact Redesign"
+      "zh": "海边实录环境",
+      "en": "Coastal Field Ambience"
     },
     "role": {
-      "zh": "声音重设计 / 混音",
-      "en": "Sound Redesign / Mix"
+      "zh": "环境实录 / 空间环境声",
+      "en": "Field Recording / Spatial Ambience"
     },
     "year": "2026",
     "description": {
-      "zh": "画面同步的水体冲击设计，强调主体、细节与尾音控制。",
-      "en": "Screen-synced water impact redesign with splash body, micro detail, and controlled tail energy."
+      "zh": "环境实录与 Ambisonic 空间声素材展示，突出真实空间、层次和沉浸感。",
+      "en": "Field recording and Ambisonic ambience material focused on real space, depth, and immersion."
     },
     "tags": {
-      "zh": ["水声", "冲击", "同步", "重设计"],
-      "en": ["water", "impact", "sync", "redesign"]
+      "zh": [
+        "环境实录",
+        "Ambisonics",
+        "空间",
+        "环境声"
+      ],
+      "en": [
+        "field recording",
+        "ambisonics",
+        "spatial",
+        "ambience"
+      ]
     },
     "mediaUrl": "assets/works/work-06.mp4",
     "posterUrl": "assets/thumbs/work-06.jpg"
   },
   {
     "id": "source-07",
-    "categoryKey": "elemental",
+    "categoryKey": "field",
     "title": {
-      "zh": "火焰元素音效制作",
-      "en": "Fire Element Craft"
+      "zh": "Ambisonic环境实录展示",
+      "en": "Ambisonic Field Recording Showcase"
     },
     "role": {
-      "zh": "声音设计 / 剪辑 / 混音",
-      "en": "Sound Design / Editing / Mix"
+      "zh": "环境实录 / 空间环境声",
+      "en": "Field Recording / Spatial Ambience"
     },
     "year": "2026",
     "description": {
-      "zh": "由燃烧颗粒、压力、运动感和持续变化的音色层构成火焰元素。",
-      "en": "Elemental fire design built from crackle, pressure, movement, and evolving tonal layers."
+      "zh": "环境实录与 Ambisonic 空间声素材展示，突出真实空间、层次和沉浸感。",
+      "en": "Field recording and Ambisonic ambience material focused on real space, depth, and immersion."
     },
     "tags": {
-      "zh": ["火焰", "元素", "质感", "运动"],
-      "en": ["fire", "elemental", "texture", "motion"]
+      "zh": [
+        "环境实录",
+        "Ambisonics",
+        "空间",
+        "环境声"
+      ],
+      "en": [
+        "field recording",
+        "ambisonics",
+        "spatial",
+        "ambience"
+      ]
     },
     "mediaUrl": "assets/works/work-07.mp4",
     "posterUrl": "assets/thumbs/work-07.jpg"
   },
   {
     "id": "source-08",
-    "categoryKey": "character",
+    "categoryKey": "farlight",
     "title": {
-      "zh": "角色待机音效 A",
-      "en": "Character Idle Audio A"
+      "zh": "打药音效",
+      "en": "Healing Feedback SFX"
     },
     "role": {
-      "zh": "声音重设计 / 混音",
-      "en": "Sound Redesign / Mix"
+      "zh": "项目音效 / Idleshow / 玩法反馈",
+      "en": "Game SFX / Idleshow / Gameplay Feedback"
     },
     "year": "2026",
     "description": {
-      "zh": "强调角色个性、动作细节与可循环节奏的待机展示。",
-      "en": "Character idle showcase emphasizing personality, motion detail, and loop-friendly timing."
+      "zh": "远光84项目相关作品，覆盖角色 Idleshow、打药反馈、皮肤展示与商业化场景声音。",
+      "en": "Farlight 84 work covering character Idleshow, healing feedback, skin presentation, and monetization audio."
     },
     "tags": {
-      "zh": ["角色", "待机", "展示", "同步"],
-      "en": ["character", "idle", "showcase", "sync"]
+      "zh": [
+        "远光84",
+        "Idleshow",
+        "玩法反馈",
+        "商业化"
+      ],
+      "en": [
+        "farlight 84",
+        "idleshow",
+        "gameplay feedback",
+        "monetization"
+      ]
     },
     "mediaUrl": "assets/works/work-08.mp4",
     "posterUrl": "assets/thumbs/work-08.jpg"
   },
   {
     "id": "source-09",
-    "categoryKey": "character",
+    "categoryKey": "farlight",
     "title": {
-      "zh": "角色待机音效 B",
-      "en": "Character Idle Audio B"
+      "zh": "诀尘 Idleshow 音效展示",
+      "en": "Juechen Idleshow SFX"
     },
     "role": {
-      "zh": "声音重设计 / 混音",
-      "en": "Sound Redesign / Mix"
+      "zh": "项目音效 / Idleshow / 玩法反馈",
+      "en": "Game SFX / Idleshow / Gameplay Feedback"
     },
     "year": "2026",
     "description": {
-      "zh": "第二组角色待机声音，突出动作点、材质细节与可读节奏。",
-      "en": "A second character idle pass with gesture accents, material detail, and readable rhythm."
+      "zh": "远光84项目相关作品，覆盖角色 Idleshow、打药反馈、皮肤展示与商业化场景声音。",
+      "en": "Farlight 84 work covering character Idleshow, healing feedback, skin presentation, and monetization audio."
     },
     "tags": {
-      "zh": ["角色", "动作", "待机", "混音"],
-      "en": ["character", "gesture", "idle", "mix"]
+      "zh": [
+        "远光84",
+        "Idleshow",
+        "玩法反馈",
+        "商业化"
+      ],
+      "en": [
+        "farlight 84",
+        "idleshow",
+        "gameplay feedback",
+        "monetization"
+      ]
     },
     "mediaUrl": "assets/works/work-09.mp4",
     "posterUrl": "assets/thumbs/work-09.jpg"
   },
   {
     "id": "source-10",
-    "categoryKey": "cinematic",
+    "categoryKey": "farlight",
     "title": {
-      "zh": "影像开场声音设计",
-      "en": "Cinematic Opening Sequence"
+      "zh": "魁斗 Idleshow 音效展示",
+      "en": "Kuito Idleshow SFX"
     },
     "role": {
-      "zh": "声音重设计 / 混音",
-      "en": "Sound Redesign / Mix"
+      "zh": "项目音效 / Idleshow / 玩法反馈",
+      "en": "Game SFX / Idleshow / Gameplay Feedback"
     },
     "year": "2026",
     "description": {
-      "zh": "围绕尺度、转场能量、重击点和镜头推进完成的影像开场设计。",
-      "en": "A cinematic opening built around scale, transition energy, hit points, and scene momentum."
+      "zh": "远光84项目相关作品，覆盖角色 Idleshow、打药反馈、皮肤展示与商业化场景声音。",
+      "en": "Farlight 84 work covering character Idleshow, healing feedback, skin presentation, and monetization audio."
     },
     "tags": {
-      "zh": ["影像", "开场", "预告片", "冲击"],
-      "en": ["cinematic", "opening", "trailer", "impact"]
+      "zh": [
+        "远光84",
+        "Idleshow",
+        "玩法反馈",
+        "商业化"
+      ],
+      "en": [
+        "farlight 84",
+        "idleshow",
+        "gameplay feedback",
+        "monetization"
+      ]
     },
     "mediaUrl": "assets/works/work-10.mp4",
     "posterUrl": "assets/thumbs/work-10.jpg"
   },
   {
     "id": "source-11",
-    "categoryKey": "character",
+    "categoryKey": "farlight",
     "title": {
-      "zh": "角色待机音效 C",
-      "en": "Character Idle Audio C"
+      "zh": "魅影终极皮开场展示",
+      "en": "Phantom Ultimate Skin Opening"
     },
     "role": {
-      "zh": "声音重设计 / 混音",
-      "en": "Sound Redesign / Mix"
+      "zh": "项目音效 / Idleshow / 玩法反馈",
+      "en": "Game SFX / Idleshow / Gameplay Feedback"
     },
     "year": "2026",
     "description": {
-      "zh": "在机械细节、运动节奏和留白之间取得平衡的角色音效循环。",
-      "en": "A stylized character audio loop balancing mechanical detail, movement, and negative space."
+      "zh": "远光84项目相关作品，覆盖角色 Idleshow、打药反馈、皮肤展示与商业化场景声音。",
+      "en": "Farlight 84 work covering character Idleshow, healing feedback, skin presentation, and monetization audio."
     },
     "tags": {
-      "zh": ["角色", "循环", "运动", "展示"],
-      "en": ["character", "loop", "motion", "showcase"]
+      "zh": [
+        "远光84",
+        "Idleshow",
+        "玩法反馈",
+        "商业化"
+      ],
+      "en": [
+        "farlight 84",
+        "idleshow",
+        "gameplay feedback",
+        "monetization"
+      ]
     },
     "mediaUrl": "assets/works/work-11.mp4",
     "posterUrl": "assets/thumbs/work-11.jpg"
   },
   {
     "id": "source-12",
-    "categoryKey": "character",
+    "categoryKey": "farlight",
     "title": {
-      "zh": "角色待机音效 D",
-      "en": "Character Idle Audio D"
+      "zh": "诺拉 Idleshow 音效展示",
+      "en": "Nora Idleshow SFX"
     },
     "role": {
-      "zh": "声音重设计 / 混音",
-      "en": "Sound Redesign / Mix"
+      "zh": "项目音效 / Idleshow / 玩法反馈",
+      "en": "Game SFX / Idleshow / Gameplay Feedback"
     },
     "year": "2026",
     "description": {
-      "zh": "更偏精修展示的角色待机片段，强调同步、音色身份和重复观看舒适度。",
-      "en": "A polished idle sequence focused on timing, sonic identity, and repeated-viewing comfort."
+      "zh": "远光84项目相关作品，覆盖角色 Idleshow、打药反馈、皮肤展示与商业化场景声音。",
+      "en": "Farlight 84 work covering character Idleshow, healing feedback, skin presentation, and monetization audio."
     },
     "tags": {
-      "zh": ["角色", "身份", "待机", "同步"],
-      "en": ["character", "identity", "idle", "sync"]
+      "zh": [
+        "远光84",
+        "Idleshow",
+        "玩法反馈",
+        "商业化"
+      ],
+      "en": [
+        "farlight 84",
+        "idleshow",
+        "gameplay feedback",
+        "monetization"
+      ]
     },
     "mediaUrl": "assets/works/work-12.mp4",
     "posterUrl": "assets/thumbs/work-12.jpg"
   },
   {
     "id": "source-13",
-    "categoryKey": "ambience",
+    "categoryKey": "farlight",
     "title": {
-      "zh": "Ambisonic 环境声作品",
-      "en": "Ambisonic Environment Reel"
+      "zh": "桃桃 Idleshow 音效展示",
+      "en": "Taotao Idleshow SFX"
     },
     "role": {
-      "zh": "实地录音 / 环境声设计",
-      "en": "Field Recording / Ambience Design"
+      "zh": "项目音效 / Idleshow / 玩法反馈",
+      "en": "Game SFX / Idleshow / Gameplay Feedback"
     },
     "year": "2026",
     "description": {
-      "zh": "由环境采集、空间运动与质感控制构建的沉浸式环境声作品。",
-      "en": "An immersive ambience reel built from environmental capture, spatial motion, and texture control."
+      "zh": "远光84项目相关作品，覆盖角色 Idleshow、打药反馈、皮肤展示与商业化场景声音。",
+      "en": "Farlight 84 work covering character Idleshow, healing feedback, skin presentation, and monetization audio."
     },
     "tags": {
-      "zh": ["空间声", "环境声", "实录", "空间"],
-      "en": ["ambisonic", "ambience", "field", "space"]
+      "zh": [
+        "远光84",
+        "Idleshow",
+        "玩法反馈",
+        "商业化"
+      ],
+      "en": [
+        "farlight 84",
+        "idleshow",
+        "gameplay feedback",
+        "monetization"
+      ]
     },
-    "mediaUrl": "assets/works/work-13-web.mp4",
+    "mediaUrl": "assets/works/work-13.mp4",
     "posterUrl": "assets/thumbs/work-13.jpg"
   }
 ]
