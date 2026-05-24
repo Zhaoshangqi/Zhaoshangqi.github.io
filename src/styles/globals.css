@@ -436,9 +436,9 @@ button {
   position: relative;
   min-height: 100svh;
   display: grid;
-  grid-template-columns: minmax(240px, 0.7fr) minmax(360px, 1fr) minmax(260px, 0.55fr);
+  grid-template-columns: minmax(320px, 0.82fr) minmax(420px, 1.1fr) minmax(260px, 0.55fr);
   align-items: center;
-  gap: clamp(22px, 4vw, 60px);
+  gap: clamp(22px, 3.4vw, 54px);
   padding: 96px clamp(18px, 5vw, 72px) 130px;
 }
 
@@ -536,7 +536,7 @@ button {
 }
 
 .hero-identity p:not(.section-kicker) {
-  max-width: 480px;
+  max-width: 540px;
   margin: 24px 0 0;
   color: var(--text-gray);
   font-size: 1rem;
@@ -546,7 +546,7 @@ button {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
-  max-width: 520px;
+  max-width: 560px;
   margin-top: 22px;
 }
 
@@ -1743,16 +1743,28 @@ button {
   }
 
   .hero-stage {
-    padding-bottom: 160px;
+    min-height: auto;
+    align-items: start;
+    gap: 28px;
+    padding-top: 100px;
+    padding-bottom: 132px;
   }
 
   .hero-showpiece {
-    order: -1;
-    height: 420px;
+    height: min(50vh, 460px);
+    min-height: 380px;
+  }
+
+  .hero-identity {
+    max-width: 780px;
+  }
+
+  .hero-identity h1 {
+    font-size: clamp(3.6rem, 11vw, 6.6rem);
   }
 
   .hero-hud-panel {
-    max-width: 680px;
+    max-width: none;
   }
 
   .project-overlay {
@@ -1777,9 +1789,25 @@ button {
   }
 
   .site-shell-header nav {
-    justify-content: center;
+    justify-content: flex-start;
     gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 3px;
     font-size: 9px;
+    scrollbar-width: none;
+  }
+
+  .site-shell-header nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hero-stage {
+    gap: 24px;
+    padding-bottom: 124px;
+  }
+
+  .hero-identity p:not(.section-kicker) {
+    max-width: 100%;
   }
 
   .lang-toggle button {
@@ -1792,19 +1820,19 @@ button {
   }
 
   .showcase-viewport {
-    min-height: 660px;
+    min-height: 620px;
   }
 
   .showcase-rail {
     left: 18px;
-    min-height: 360px;
+    min-height: 340px;
   }
 
   .showcase-rail .project-monitor,
   .showcase-rail .project-monitor.featured {
-    flex-basis: min(82vw, 520px);
-    width: min(82vw, 520px);
-    transform: rotateY(-5deg) translateZ(20px);
+    flex-basis: min(80vw, 500px);
+    width: min(80vw, 500px);
+    transform: rotateY(-3deg) translateZ(16px);
   }
 
   .experience-grid,
@@ -1841,10 +1869,21 @@ button {
     padding-inline: 16px;
   }
 
+  .hero-stage {
+    gap: 18px;
+    padding-top: 92px;
+    padding-bottom: 108px;
+  }
+
   .hero-identity h1 {
     max-width: 100%;
     font-size: clamp(2.6rem, 11vw, 3.25rem);
     overflow-wrap: anywhere;
+  }
+
+  .hero-identity p:not(.section-kicker) {
+    margin-top: 18px;
+    font-size: 0.94rem;
   }
 
   .hero-showpiece {
@@ -1878,7 +1917,7 @@ button {
   }
 
   .showcase-viewport {
-    min-height: 620px;
+    min-height: 580px;
     border-radius: 18px;
   }
 
@@ -1886,15 +1925,16 @@ button {
     left: 14px;
     bottom: 18px;
     gap: 16px;
+    min-height: 320px;
     padding-right: 40px;
   }
 
   .showcase-rail .project-monitor,
   .showcase-rail .project-monitor.featured {
-    flex-basis: 84vw;
-    width: 84vw;
-    height: 340px;
-    min-height: 340px;
+    flex-basis: 82vw;
+    width: 82vw;
+    height: 320px;
+    min-height: 320px;
   }
 
   .hero-category-nav {
